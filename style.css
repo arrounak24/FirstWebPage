@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+body{
+  min-height: 100vh;
+  background: #05060a;
+  color:white;
+  
+
+}
+.background {
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(120deg, rgba(0,255,255,0.15), rgba(180,0,255,0.15)),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,0.05),
+      rgba(255,255,255,0.05) 1px,
+      transparent 1px,
+      transparent 40px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255,255,255,0.05),
+      rgba(255,255,255,0.05) 1px,
+      transparent 1px,
+      transparent 40px
+    );
+  z-index: -1;
+}
+.container
+{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  text-align: centr;
+  
+}
+.row{
+  display: flex;
+  gap:30px;
+}
+.heading1{
+
+  font-size: 42px;
+  letter-spacing: 6px;
+  background: linear-gradient(90deg, #00f0ff, #ff8df0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+
+}
+.subheading1
+{
+ margin-top: 20px;
+  font-size: 13px;
+  letter-spacing: 4px;
+  opacity: 0.7;
+
+
+}
+.menu{
+    margin-top:50px;
+    display:flex;
+    flex-direction: column;
+    gap:50px;
+    
+
+
+
+}
+
+.card{
+ 
+  text-decoration: none;
+  color: white;
+
+
+     width: 160px;
+  height: 130px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 20px;
+  text-align: center;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 25px rgba(0,0,0,0.5);
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+ 
+
+
+}
+.card:hover{
+
+border :2px solid white;
+
+}
+
+
+
+.card span{
+width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00f0ff, #b400ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+  transition-property: all;
+ transition-timing-function: ease;
+ transition-duration: 1000ms;
+ transition-delay: 0s;
+  
+
+
+}
+.card:hover span
+{
+  border: 3px solid white;
+  background: rgb(202, 100, 224);
+  transform: scale(1.25);
+  /*font-size: 25px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;*/
+  
+
+
+
+}
+.card p{
+  
+  font-size: 10px;
+  opacity:0.8;
+  letter-spacing:3px;
+transition-property: all;
+ transition-timing-function: ease;
+ transition-duration: 500ms;
+ transition-delay: 0s;
+  
+
+}
+.card:hover p{
+
+  transform:scale(1.25);
+  /*font-size: 13px;
+  opacity:1.0;
+  letter-spacing:4px;*/
+
+
+}
+
+.intro-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.moving-text {
+  font-size: 36px;
+  letter-spacing: 6px;
+  white-space: nowrap;
+  background: linear-gradient(90deg, #00f0ff, #ff8df0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+
+  /*animation*/
+  animation: slideX 5s ease-in-out infinite,
+            neonglow 3.5s ease-in-out infinite;
+
+}
+@keyframes slideX {
+  0% {
+    transform: translateX(-150px);
+  }
+  50% {
+    transform: translateX(150px);
+  }
+  100% {
+    transform: translateX(-150px);
+  }
+}
+.card {
+  transition: box-shadow 0.4s ease;
+}
+
+.card:hover {
+  box-shadow:
+    0 0 10px rgba(0, 240, 255, 0.5),
+    0 0 30px rgba(0, 240, 255, 0.8),
+    0 0 60px rgba(0, 240, 255, 0.6);
+}
+@keyframes neonglow {
+  0% {
+    text-shadow:
+      0 0 6px rgba(0,240,255,0.4),
+      0 0 12px rgba(0,240,255,0.4),
+      0 0 20px rgba(0,240,255,0.3);
+  }
+
+  25% {
+    text-shadow:
+      0 0 10px rgba(0,240,255,0.6),
+      0 0 18px rgba(0,240,255,0.5),
+      0 0 28px rgba(0,240,255,0.4);
+  }
+
+  50% {
+    text-shadow:
+      0 0 14px rgba(0,240,255,0.8),
+      0 0 26px rgba(0,240,255,0.7),
+      0 0 40px rgba(0,240,255,0.6);
+  }
+
+  75% {
+    text-shadow:
+      0 0 10px rgba(0,240,255,0.6),
+      0 0 18px rgba(0,240,255,0.5),
+      0 0 28px rgba(0,240,255,0.4);
+  }
+
+  100% {
+    text-shadow:
+      0 0 6px rgba(0,240,255,0.4),
+      0 0 12px rgba(0,240,255,0.4),
+      0 0 20px rgba(0,240,255,0.3);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+  .heading1 {
+    font-size: 32px;
+    letter-spacing: 4px;
+  }
+
+  .subheading1 {
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  .menu {
+    gap: 35px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .card {
+    width: 200px;
+    height: 140px;
+  }
+}
+
